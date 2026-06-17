@@ -1,0 +1,12 @@
+services:
+  bot:
+    build: .
+    container_name: insta-stories-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - bot-data:/app/data
+
+volumes:
+  bot-data:
